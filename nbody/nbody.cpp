@@ -1,6 +1,3 @@
-// nbody.cpp : Defines the entry point for the console application.
-//
-
 #include <omp.h>
 #include <cmath>
 #include <fstream>
@@ -24,25 +21,29 @@ typedef struct cord {
 	double z;
 } cord;
 
-inline cord operator+(cord const &p1, cord const &p2) {
+inline cord operator+(const cord& p1, const cord& p2) {
 	return { p1.x + p2.x, p1.y + p2.y, p1.z + p2.z };
 }
-inline cord operator-(cord const &p1, cord const &p2) {
+inline cord operator-(const cord& p1, const cord& p2) {
 	return { p1.x - p2.x, p1.y - p2.y, p1.z - p2.z };
 }
-inline cord& operator+=(cord &p1, cord const &p2) {
+inline cord& operator+=(cord& p1, const cord& p2) {
 	p1.x += p2.x;
 	p1.y += p2.y;
 	p1.z += p2.z;
 	return p1;
 }
-inline cord operator*(double const &m, cord const &p) {
+inline cord operator*(const double& m, const cord& p) {
 	return { m * p.x, m * p.y, m * p.z };
 }
-inline cord operator*(cord const &p, double const &m) {
+inline cord operator*(const cord& p, const double& m) {
 	return { m * p.x, m * p.y, m * p.z };
 }
-inline double mag(cord const &p) {
+inline ostream& operator<<(ostream& stream, const cord& p) {
+	stream << p.x << " " << p.y << " " << p.z;
+	return stream;
+}
+inline double mag(const cord& p) {
 	return sqrt(p.x*p.x + p.y*p.y + p.z*p.z);
 }
 
@@ -105,7 +106,7 @@ int main() {
 			accp[j] = acc[j];
 
 		for (decltype(N) j = 0; j < N; j++)
-			traj << pos[j].x << " " << pos[j].y << " " << pos[j].z << endl;
+			traj << pos[j] << endl;
 		log << "Iteration " << i << " Time " << (omp_get_wtime() - start) << " Collisions " << collisions.size() << endl;
 	}
 	traj.close();
