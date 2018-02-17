@@ -75,7 +75,7 @@ int main() {
 	}
 	auto M = (decltype(T))ceil(T / delt);
 	log << "Running " << M << " iterations" << endl;
-
+	auto main_start = omp_get_wtime();
 	for (decltype(M) i = 0; i<M; i++) {
 		auto start = omp_get_wtime();
 		unordered_set<decltype(M)> collisions;
@@ -109,6 +109,7 @@ int main() {
 			traj << pos[j] << endl;
 		log << "Iteration " << i << " Time " << (omp_get_wtime() - start) << " Collisions " << collisions.size() << endl;
 	}
+	log << "Ran " << M << " iterations in " << (omp_get_wtime() - main_start) << endl;
 	traj.close();
 	log.close();
 }
