@@ -9,7 +9,7 @@ using namespace std;
 #define W 200.
 #define D 400.
 #define N 1000
-#define T 3600
+#define T 3
 #define Rm 1.
 #define Mm 1.
 #define G 1.

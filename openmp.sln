@@ -7,7 +7,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nbody", "nbody\nbody.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "montecarlo", "montecarlo\montecarlo.vcxproj", "{2E704603-BD4F-4B7C-A9E1-38A78735C111}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "collapsereduce", "collapsereduce\collapsereduce.vcxproj", "{8239844E-C5F4-46D2-A542-1C11968856C7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "midsem", "midsem\midsem.vcxproj", "{78553054-7A76-4FA2-859A-5790316049EB}"
+EndProject
 Global
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
@@ -31,11 +38,30 @@ Global
 		{2E704603-BD4F-4B7C-A9E1-38A78735C111}.Release|x64.Build.0 = Release|x64
 		{2E704603-BD4F-4B7C-A9E1-38A78735C111}.Release|x86.ActiveCfg = Debug|Win32
 		{2E704603-BD4F-4B7C-A9E1-38A78735C111}.Release|x86.Build.0 = Debug|Win32
+		{8239844E-C5F4-46D2-A542-1C11968856C7}.Debug|x64.ActiveCfg = Debug|x64
+		{8239844E-C5F4-46D2-A542-1C11968856C7}.Debug|x64.Build.0 = Debug|x64
+		{8239844E-C5F4-46D2-A542-1C11968856C7}.Debug|x86.ActiveCfg = Debug|Win32
+		{8239844E-C5F4-46D2-A542-1C11968856C7}.Debug|x86.Build.0 = Debug|Win32
+		{8239844E-C5F4-46D2-A542-1C11968856C7}.Release|x64.ActiveCfg = Release|x64
+		{8239844E-C5F4-46D2-A542-1C11968856C7}.Release|x64.Build.0 = Release|x64
+		{8239844E-C5F4-46D2-A542-1C11968856C7}.Release|x86.ActiveCfg = Release|Win32
+		{8239844E-C5F4-46D2-A542-1C11968856C7}.Release|x86.Build.0 = Release|Win32
+		{78553054-7A76-4FA2-859A-5790316049EB}.Debug|x64.ActiveCfg = Debug|x64
+		{78553054-7A76-4FA2-859A-5790316049EB}.Debug|x64.Build.0 = Debug|x64
+		{78553054-7A76-4FA2-859A-5790316049EB}.Debug|x86.ActiveCfg = Debug|Win32
+		{78553054-7A76-4FA2-859A-5790316049EB}.Debug|x86.Build.0 = Debug|Win32
+		{78553054-7A76-4FA2-859A-5790316049EB}.Release|x64.ActiveCfg = Release|x64
+		{78553054-7A76-4FA2-859A-5790316049EB}.Release|x64.Build.0 = Release|x64
+		{78553054-7A76-4FA2-859A-5790316049EB}.Release|x86.ActiveCfg = Release|Win32
+		{78553054-7A76-4FA2-859A-5790316049EB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA6B857E-62B7-4D04-A3A9-B52930693ADC}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
